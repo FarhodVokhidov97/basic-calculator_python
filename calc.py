@@ -1,3 +1,4 @@
+from cmath import sqrt
 from multiprocessing.connection import answer_challenge
 from secrets import choice
 
@@ -20,29 +21,39 @@ def div(a,b):
     
 
 def square(a,b):
-    answer = a^b
+    answer = pow(a,b)
     print(str(a)+'^'+str(b)+'='+str(answer))
 
 print("A, add(+)")
 print("B, sub(-)")
-print("C, nul(*)")
+print("C, mul(*)")
 print("D, div(/)")
 print("E, sqrt(^)")
 choice = str(input('Input your choise'))
 match choice:
     case "A":
-        print("You can become a web developer.")
+        a= int(input('input a='))
+        b= int(input('input b='))
+        add(a,b)
 
     case "B":
-        print("You can become a Data Scientist")
+        a= int(input('input a='))
+        b= int(input('input b='))
+        sub(a,b)
 
     case "C":
-        print("You can become a backend developer")
+        a= int(input('input a='))
+        b= int(input('input b='))
+        mul(a,b)
     
     case "D":
-        print("You can become a Blockchain developer")
+        a= int(input('input a='))
+        b= int(input('input b='))
+        div(a,b)
 
     case "E":
-        print("You can become a mobile app developer")
+        a= int(input('input a='))
+        b= int(input('input b='))
+        square(a,b)
     case _:
         print("letter must be Uppercase")
