@@ -24,36 +24,42 @@ def square(a,b):
     answer = pow(a,b)
     print(str(a)+'^'+str(b)+'='+str(answer))
 
-print("A, add(+)")
-print("B, sub(-)")
-print("C, mul(*)")
-print("D, div(/)")
-print("E, sqrt(^)")
-choice = str(input('Input your choise'))
-match choice:
-    case "A":
-        a= int(input('input a='))
-        b= int(input('input b='))
-        add(a,b)
+while True:   
+    print("A, add(+)")
+    print("B, sub(-)")
+    print("C, mul(*)")
+    print("D, div(/)")
+    print("E, sqrt(^)") 
+    print("exit")
+    choice = str(input('Input your choise'))
+    match choice:
+        case "A":
+            a= int(input('input a='))
+            b= int(input('input b='))
+            add(a,b)
 
-    case "B":
-        a= int(input('input a='))
-        b= int(input('input b='))
-        sub(a,b)
+        case "B":
+            a= int(input('input a='))
+            b= int(input('input b='))
+            sub(a,b)
 
-    case "C":
-        a= int(input('input a='))
-        b= int(input('input b='))
-        mul(a,b)
+        case "C":
+            a= int(input('input a='))
+            b= int(input('input b='))
+            mul(a,b)
     
-    case "D":
-        a= int(input('input a='))
-        b= int(input('input b='))
-        div(a,b)
+        case "D":
+            a= int(input('input a='))
+            b= int(input('input b='))
+            div(a,b)
 
-    case "E":
-        a= int(input('input a='))
-        b= int(input('input b='))
-        square(a,b)
-    case _:
-        print("letter must be Uppercase")
+        case "E":
+            a= int(input('input a='))
+            b= int(input('input b='))
+            square(a,b)
+
+        case "exit":
+            quit()    
+
+        case _:
+            print("letter must be Uppercase")
